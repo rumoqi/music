@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>播放器</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </head>
+  <body onload="load()">
+    <!--音乐盒子-->
+    <div class="music-box">
+      <!--照片-->
+      <div class="music-img">
+        <img class="music-image" src="./img/d6106d3f500c22fbfa7f2e13d36d34d21229412811.jpg@.png" alt="" />
+      </div>
+
+      <!--歌名与作者-->
+      <div class="music-desc">
+        <h1 class="music-title">姬霓太美</h1>
+        <p class="music-author">坤坤</p>
+      </div>
+
+      <!--设置-->
+      <!--设置音量-->
+      <div class="music-volume-box hidden-box">
+        <span class="volume-down"><i class="material-icons">remove</i></span>
+        <label for="music-volume"></label><input type="range" name="volume" id="music-volume" step="20" max="100" min="0" value="80" />
+        <span class="volume-up"><i class="material-icons">add</i></span>
+      </div>
+
+      <!--按钮-->
+      <div class="btn-box">
+        <i class="material-icons repeat">repeat</i>
+        <i class="material-icons favorite active">favorite</i>
+        <i class="material-icons volume">volume_up</i>
+      </div>
+
+      <!--播放进度条-->
+      <div class="progress-box">
+        <span class="now-time">00:00</span>
+        <label for="music-progress"></label><input type="range" name="volume" id="music-progress" max="100" min="0" value="0" />
+        <span class="end-time">00:00</span>
+      </div>
+
+      <!--暂停按钮-->
+      <div class="play-box">
+        <span class="last-btn">&barwed;</span>
+        <span class="play">
+          <i class="material-icons">play_arrow</i>
+        </span>
+        <span class="next-btn">&barwed;</span>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

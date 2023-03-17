@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #6e7cf5;
+  position: relative;
+}
+
+.music-box {
+  width: 330px;
+  height: 580px;
+  border-radius: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  backdrop-filter: blur(16px);
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 25%);
+
+  box-shadow: 0 10px 30px #00000085;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: rgb(40, 45, 100);
+  user-select: none;
+}
+
+.music-img {
+  height: 270px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 30px #7d70ecb7;
+  margin-top: 20px;
+}
+
+.music-img img {
+  width: 280px;
+  height: 270px;
+  object-fit: cover;
+  object-position: top left;
+  transition: 1s;
+}
+
+.music-img img:hover {
+  object-position: bottom right;
+}
+
+/*设置进度条*/
+.music-box input[type='range'] {
+  -webkit-appearance: none !important;
+  margin: 0px;
+  padding: 0px;
+  background: rgb(255, 255, 255);
+  height: 5px;
+  width: 150px;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.music-box input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: #ff3677;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  box-shadow: -100vw 0 0 100vw rgb(160, 200, 250);
+}
+
+.music-box input[type='range']::-moz-range-thumb {
+  background: #ff3677;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+}
+
+.music-box input[type='range']::-ms-thumb {
+  -webkit-appearance: none !important;
+  background: #ff3677;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+}
+
+/*文字信息*/
+.music-desc {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.music-title {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.music-author {
+  font-size: 20px;
+  color: #6e7cf5;
+}
+
+/*设置音量*/
+.music-volume-box {
+  display: flex;
+  align-items: center;
+}
+
+.volume-down,
+.volume-up {
+  height: 24px;
+}
+
+#music-volume {
+  margin: 0 10px;
+}
+
+/*按钮盒子*/
+.btn-box {
+  width: 80%;
+  margin: 10px 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-box i {
+  cursor: pointer;
+}
+
+.red-color {
+  color: #ff3677;
+}
+
+/*歌曲进度条*/
+.progress-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.now-time,
+.end-time {
+  transform: scale(0.7);
+}
+
+#music-progress {
+  width: 200px;
+  background-color: #fff;
+}
+
+/*暂停*/
+.play-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+.play-box span {
+  cursor: pointer;
+}
+.last-btn {
+  transform: rotate(-90deg);
+}
+.next-btn {
+  transform: rotate(90deg);
+}
+
+.play {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: rgb(160, 200, 250);
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.play i {
+  font-size: 36px;
+}
+
+.hidden-none {
+  display: none;
+}
+
+/*隐藏的css方法*/
+.hidden-box {
+  visibility: hidden;
+}
